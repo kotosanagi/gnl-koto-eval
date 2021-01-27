@@ -1,4 +1,4 @@
-#include "get_next_line.h"
+#include "../get_next_line.h"
 #include <stdio.h>
 
 void	put_GNL(char *file, int (*f)(int, char **)){
@@ -25,21 +25,21 @@ int main(){
 
 // =======start error management 1==========
 
-//     gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c main.c && ./a.out
+//     gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
 
-		// printf("\n====start error management 1====\n\n");
-		// char *line;
-		// int ret;
-		// line = NULL;
-		// ret = get_next_line(42, &line);
-		// printf("fd=%d, ret:%2d, %s\n", 42, ret, line);
-		// printf("\n====end error management 1====\n\n");
+		printf("\n====start error management 1====\n\n");
+		char *line;
+		int ret;
+		line = NULL;
+		ret = get_next_line(42, &line);
+		printf("fd=%d, ret:%2d, %s\n", 42, ret, line);
+		printf("\n====end error management 1====\n\n");
 
 // ======end error management 1=======
 
 // =======start error management 2==========
 
-//     gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1000000000000 get_next_line.c get_next_line_utils.c main.c && ./a.out
+//     gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1000000000000 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
 
 		// printf("\n====start error management 2====\n\n");
 		// char *line;
@@ -57,15 +57,15 @@ int main(){
 
 
 //	Large BUFFER_SIZE (>1024)
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=3000 get_next_line.c get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=3000 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
 
 //	Small BUFFER_SIZE (< 8, and 1)
 
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=6 get_next_line.c get_next_line_utils.c main.c && ./a.out
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1 get_next_line.c get_next_line_utils.c main.c && ./a.out
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=4 get_next_line.c get_next_line_utils.c main.c && ./a.out
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=5 get_next_line.c get_next_line_utils.c main.c && ./a.out
-//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=3 get_next_line.c get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=6 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=4 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=5 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
+//	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=3 ../get_next_line.c ../get_next_line_utils.c main.c && ./a.out
 
 		// printf("\n====start testing 1====\n\n");
 		// char *line;
